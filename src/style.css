@@ -1,0 +1,58 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5rem;
+    /* background-color: lightcoral; */
+    /* clip-path: polygon(0 0, 100% 0%, 100% 50%, 0% 100%); */
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: lightcoral; /* Background color */
+    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 94%); /* Define your shape */
+    z-index: -1; /* Place behind text */
+}
+
+header .header-description {
+    padding: 2rem;
+}
+
+svg {
+    width: 50px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 5rem;
+}
+
+main .projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 4rem;
+}
+
+main .project {
+    height: 500px;
+    width: 420px;
+    background-color: skyblue;
+    /* margin: 1rem; */
+}
+
+footer {
+    display: flex;
+    padding: 5rem;
+    background-color: lightcoral;
+}
