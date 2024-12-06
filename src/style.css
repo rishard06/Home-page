@@ -145,5 +145,27 @@ footer {
     display: flex;
     justify-content: space-between;
     padding: 5rem;
-    background-color: lightcoral;
+    background-color: lightcoral;       
+}
+
+.contacts p,
+.contacts div {
+    margin: 0 0 20px 0;
+}
+
+.contacts .number {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.contacts .icons svg {
+    margin-right: 10px;
+}
+
+footer img {
+    height: 400px;
+    width: 700px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.329) 1px 5px 8px;
 }
