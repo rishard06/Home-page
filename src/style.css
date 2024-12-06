@@ -6,6 +6,10 @@
     font-weight: 400;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-size: 2.5rem;
     margin: 15px 0;
@@ -31,12 +35,13 @@ header::before {
     width: 100%;
     height: 100%;
     background-color: lightcoral;
-    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 94%);
+    clip-path: polygon(0 0, 100% 0, 100% 65%, 0 94%);
     z-index: -1;
 }
 
 header img {
     box-shadow: rgba(0, 0, 0, 0.50) 0px 3px 8px;
+    border-radius: 50px;
 }
 
 header h2 {
@@ -49,6 +54,8 @@ header h2 {
 header .header-description {
     background-color: white;
     box-shadow: rgba(0, 0, 0, 0.40) 0px 3px 8px;
+    border-bottom-right-radius: 50px;
+    border-top-right-radius: 50px;
     padding: 3rem;
     line-height: 1.5rem;
 }
@@ -64,11 +71,12 @@ header .icons {
 }
 
 .icons svg {
-    transition: transform 100ms ease-in;
+    transition: transform 100ms ease-out 25ms;
 }
 
 .icons svg:hover {
     transform: scale(1.4);
+    cursor: pointer;
 }
 
 main {
@@ -77,18 +85,60 @@ main {
     padding: 5rem;
 }
 
+main h2,
+footer h2 {
+    margin: 15px 0;
+    font-weight: bold;
+    font-size: 2rem;
+}
+
 main .projects {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     gap: 4rem;
 }
 
 main .project {
     height: 500px;
-    width: 420px;
-    background-color: #f6a794;
-    /* margin: 1rem; */
+    max-width: 400px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.329) 1px 5px 8px;
+    border-radius: 50px;
+}
+
+.project .project-screenshot {
+    height: 60%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    transition: transform 400ms ease-out 25ms;
+}
+
+.project-screenshot img {
+    width: 100%;
+    height: 100%;
+    border-top-left-radius: 50px;
+    border-top-right-radius: 50px;
+    object-fit: cover;
+}
+
+.project:hover .project-screenshot {
+    transform: translateY(-30px);
+    box-shadow: rgba(0, 0, 0, 0.329) 1px 5px 8px;
+}
+
+main .project-title {
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem;
+}
+
+.project-title .icons svg {
+    margin: 0 5px;
+}
+
+.project-info p {
+    margin: 0 1rem;
 }
 
 footer {
